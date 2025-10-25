@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>C&C | Home</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- === Preloader === -->
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
+<header class="navbar">
+    <div id="scroll-progress"></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home" class="scroll-link">Home</a></li>
+      <li><a href="#history" class="scroll-link">History</a></li>
+      <li><a href="#skills" class="scroll-link">Skills</a></li>
+
+      <li class="logo">C&C</li>
+
+      <li><a href="#moonlit" class="scroll-link">Waltz</a></li>
+      <li><a href="#gallery" class="scroll-link">Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="scroll-progress"></div>
+
+
+  <main class="home" id="home">
+    <div class="content">
+      <div class="quote-box">
+        <img src="assets/forquote.png" alt="" class="quote-frame" aria-hidden="true">
+        <div class="quote-inner">
+          <p id="quote-text">
+“My Carmilla, why are you so<br>cold and pale?  <br>Just like the moonlight.”
+          </p>
+          <button id="sound-btn" aria-label="Play quote sound">🔊</button>
+          <audio id="quote-audio" src="assets/quote.mp3" preload="auto"></audio>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="history" id="history">
+    <h2 class="history-title">History of Love: Immortal</h2>
+
+    <div class="timeline">
+      <div class="block left">
+        <video class="story-video" src="assets/video2.mp4" muted playsinline></video>
+        <p>For years, Cecillion hid his true nature behind the mask of a celebrated opera singer in Avalor. Behind the applause and fame lived the last of the Blood Demons — lonely and haunted by his past.</p>
+      </div>
+
+      <div class="block right">
+        <video class="story-video" src="assets/video1.mp4" muted playsinline></video>
+        <p>One night, he met Carmilla, a noble lady whose grace and gaze awakened feelings he thought long lost. Their secret love bloomed under the moonlight, far from the eyes of the world.</p>
+      </div>
+
+      <div class="block left">
+        <video class="story-video" src="assets/video3.mp4" muted playsinline></video>
+        <p>But their happiness was destroyed by Count Ansaac, Carmilla’s father, who deemed Cecillion unworthy. Imprisoned and forced into a loveless marriage, Carmilla took her own life on her wedding day.</p>
+      </div>
+
+      <div class="block right">
+        <video class="story-video" src="assets/video4.mp4" muted playsinline></video>
+        <p>Heartbroken, Cecillion returned and revived her with his blood. From that night on, they became eternal — two souls bound by love, forever hiding from the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION (Cecilion default) ===== -->
+  <section class="skills" id="skills">
+<div class="skills-bg" id="skills-bg"></div>
+    <div class="skills-content">
+
+      <div class="skills-info">
+
+        <!-- Header: name + mage icon -->
+        <div class="skills-header">
+          <h2 class="character-name" id="char-name-text">Cecilion</h2>
+          <img src="assets/mage-icon.png" alt="Mage Icon" class="mage-icon">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Roles -->
+        <div class="character-type">
+          <span class="role" id="role-main">Mage</span>
+          <div class="subroles role-tags">
+            <span class="tag">Poke</span>
+            <span class="tag">Burst</span>
+          </div>
+        </div>
+
+        <!-- Abilities (skills-list) -->
+        <div class="skills-row" id="skills-list">
+          <div class="skill" data-desc="Cecilion выпускает волну энергии, наносящую урон врагам.">
+            <img src="assets/cecskill1.png" alt="Skill 1" class="skill-circle">
+          </div>
+
+          <div class="skill" data-desc="Следующая атака Cecilion наносит дополнительный урон.">
+            <img src="assets/cecskill2.png" alt="Skill 2" class="skill-circle">
+          </div>
+          <div class="skill" data-desc="Cecilion ускоряется и восстанавливает здоровье.">
+            <img src="assets/cecskill3.png" alt="Skill 3" class="skill-circle">
+          </div>
+
+          <div class="skill" data-desc="Мощная ульта наносит урон по площади.">
+            <img src="assets/cecskill4.png" alt="Skill 4" class="skill-circle">
+          </div>
+
+          <div class="skill" data-desc="Пассивная способность усиливает все умения.">
+            <img src="assets/cecskill5.png" alt="Skill 5" class="skill-circle">
+          </div>
+        </div>
+
+        <!-- Stats (chess order) -->
+        <div class="skills-stats">
+          <div class="stat-row top-row">
+            <div class="stat-item right">
+              <span class="stat-title">Durability</span>
+              <img id="durability" src="assets/durability (2).png" alt="Durability" class="stat-bar">
+            </div>
+            <div class="stat-item left">
+              <span class="stat-title">Offense</span>
+              <img id="offense" src="assets/offense (2).png" alt="Offense" class="stat-bar">
+            </div>
+          </div>
+
+          <div class="stat-row bottom-row">
+            <div class="stat-item left">
+              <span class="stat-title">Ability Effects</span>
+              <img id="ability" src="assets/ability (2).png" alt="Ability Effects" class="stat-bar">
+            </div>
+            <div class="stat-item right">
+              <span class="stat-title">Difficulty</span>
+              <img id="difficulty" src="assets/difficulty (2).png" alt="Difficulty" class="stat-bar">
+            </div>
+          </div>
+        </div>
+<!-- Next button (has id so JS finds it reliably) -->
+<button id="next-btn" class="next-btn">
+  <img src="assets/next.png" alt="Next">
+</button>
+<!-- Глобальный tooltip: вставляем внутри секции skills, но вне .skills-content -->
+<div id="skill-tooltip" class="tooltip-global" aria-hidden="true"></div>
+
+
+</div> <!-- .skills-info -->
+</div> <!-- .skills-content -->
+</section> <!-- .skills -->
+
+</div>
+</div> 
+</section> 
+
+<!-- ===== Moonlit Waltz / Duo Skill ===== -->
+<section id="moonlit" class="moonlit-section">
+  <div class="moonlit-inner">
+    <div class="moonlit-header">
+      <div class="mw-title left">Moonlit Waltz</div>
+      <div class="mw-badge"><img src="assets/mw-badge.png" alt="badge"></div>
+      <div class="mw-title right">Duo Skill</div>
+    </div>
+
+    <div class="mw-desc">
+      <p>
+        Cecilion can activate the skill Moonlit Waltz, transforming Carmilla into a Phantom Shadow attached to him.
+        While attached, Cecilion protects her from damage and gains a shield based on Carmilla's level. After activation,
+        Carmilla can choose a destination to dash to, dealing magic damage to enemies in the area and briefly slowing them.
+      </p>
+    </div>
+
+    <div class="mw-media-wrap">
+              <!-- декоративная рамка — ты можешь добавить свои элементы поверх неё -->
+
+
+      <div class="mw-frame">
+        <video id="mw-video" src="assets/moonlit.mp4" controls preload="metadata" playsinline></video>
+      </div>
+    </div>
+
+    <div class="mw-tips">
+      <div class="mw-tips-title">Tips</div>
+      <p class="mw-tips-text">
+        Use this skill to protect Carmilla, safely enter the battlefield, or initiate a fight. Synchronize Cecilion's activation
+        with Carmilla's chosen position to maximize damage and crowd control.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="gallery-inner">
+    <h2 class="gallery-title">Gallery</h2>
+
+    <div class="gallery-grid">
+      <!-- Левая колонка -->
+      <div class="left-column">
+        <img src="assets/gallery2.png" alt="Left 1" class="thumb side-large">
+        <img src="assets/gallery3.png" alt="Left 2" class="thumb side-large">
+      </div>
+
+      <!-- Главное изображение -->
+      <div class="main-column">
+        <div class="gallery-main-wrap">
+          <img id="gallery-main" src="assets/gallery1.png" alt="Main image">
+          <div class="gallery-actions">
+            <button class="icon-btn" id="save-btn" title="Сохранить" aria-label="Сохранить">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7zM5 5h11v4H5zM5 19V11h14v8zM12 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+              </svg>
+            </button>
+            <button class="icon-btn" id="fullscreen-btn" title="Открыть" aria-label="Открыть">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3h2V5h3V3zm11 0h-3v2h3v3h2V5a2 2 0 0 0-2-2zM3 16v3a2 2 0 0 0 2 2h3v-2H5v-3H3zm18 0h-2v3h-3v2h3a2 2 0 0 0 2-2v-3z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Нижние три -->
+      <div class="bottom-column">
+        <img src="assets/gallery4.jpg" alt="Bottom 1" class="thumb bottom-thumb">
+        <img src="assets/gallery5.png" alt="Bottom 2" class="thumb bottom-thumb">
+        <img src="assets/gallery6.png" alt="Bottom 3" class="thumb bottom-thumb">
+      </div>
+    </div>
+  </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

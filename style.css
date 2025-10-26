@@ -15,7 +15,7 @@ body {
 .navbar {
   width: 100%;
   background: linear-gradient(to right, #303A7D, #0B122D);
-  padding: 16px 24px;
+  padding: 10px 16px;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,28 +49,28 @@ body {
   font-size: 2.5rem;
   color: white;
   position: relative;
-  -webkit-text-stroke: 0.8px #e6b3d6; /* розоватая обводка */
+  -webkit-text-stroke: 0.8px #e6b3d6; 
   text-stroke: 0.8px #e6b3d6
 }
 
 /* MAIN SECTION */
 main.home {
-  padding-top: 100px; /* было 120px */
+  padding-top: 100px; 
 }
 
 .content {
   display: flex;
-  align-items: flex-start; /* подняли цитату */
+  align-items: flex-start; 
   justify-content: flex-start;
   min-height: calc(100vh - 100px);
   padding-left: 10vw;
-  padding-top: 4vh; /* немного дополнительного воздуха */
+  padding-top: 4vh; 
 }
 
 /* QUOTE BOX */
 .quote-box {
   position: relative;
-  width: 420px; /* было 550px */
+  width: 420px; 
   max-width: 55%;
 }
 
@@ -88,7 +88,7 @@ main.home {
 .quote-inner {
   position: relative;
   z-index: 2;
-  padding: 55px 38px; /* было 80px 50px */
+  padding: 55px 38px; 
 }
 
 #quote-text {
@@ -98,7 +98,7 @@ main.home {
   color: #ffffff;
   text-align: left;
   margin-bottom: 20px;
-  white-space: pre-wrap; /* ← сохраняет пробелы и переносы строк */
+  white-space: pre-wrap; 
   word-break: break-word;
 }
 
@@ -279,11 +279,11 @@ main.home {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end; /* всё вправо */
+  justify-content: flex-end; 
   align-items: center;
   padding-right: 8%;
 
-  top: -60px; /* 🔼 поднимает весь блок вверх */
+  top: -60px; 
 }
 
 .skills-info {
@@ -298,10 +298,10 @@ main.home {
   display: flex;
   align-items: center;
   gap: 16px;
-  justify-content: flex-start; /* прижимаем влево */
+  justify-content: flex-start; 
   width: fit-content;
   position: relative;
-  left: -150px; /* теперь точно двигается влево/вправо */
+  left: -150px; 
 }
 
 .character-name {
@@ -326,7 +326,7 @@ main.home {
   margin: 8px 0 18px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   position: relative;
-  left: -40px; /* тот же отступ, что у имени */
+  left: -40px; 
 }
 
 /* -------- ROLE / SUBROLES -------- */
@@ -337,7 +337,7 @@ main.home {
   gap: 8px;
   margin-bottom: 30px;
   position: relative;
-  left: -220px; /* выравниваем всё вместе */
+  left: -220px; 
 }
 
 .role,
@@ -357,7 +357,7 @@ main.home {
 .skills-row {
   display: flex;
   gap: 28px;
-  margin-bottom: 50px; /* отступ перед шкалами */
+  margin-bottom: 50px; 
 }
 
 .skill-circle {
@@ -406,7 +406,7 @@ main.home {
 }
 
 /* -------- NEXT BUTTON -------- */
-.skills .next-btn { /* ограничиваем область только секцией Skills */
+.skills .next-btn { 
   background: none;
   border: none;
   cursor: pointer;
@@ -417,7 +417,7 @@ main.home {
 }
 
 .skills .next-btn img {
-  width: 20px; /* уменьшено */
+  width: 20px; 
   height: auto;
 }
 
@@ -670,63 +670,6 @@ body.loaded #preloader {
 }
 
 
-/* === NAVBAR COMPACT STYLE 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to right, #303A7D, #0B122D);
-  backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.navbar nav {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: height 0.3s ease;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px; /* ближе друг к другу 
-  padding: 0;
-}
-
-/* ссылки 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.4rem; 
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #7ab2ff;
-}
-
-/* логотип 
-.logo {
-  font-family: 'Italiana', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 30px; 
-}
-
-/* уменьшение при скролле 
-.navbar.shrink nav {
-  height: 30px;
-} === */
-
 .navbar.shrink {
   background:linear-gradient(to right, #303A7D, #0B122D);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -753,18 +696,18 @@ section.show {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('assets/history-bg (2).png') center/cover no-repeat;
-  z-index: -1; /* чтобы текст был поверх фона */
+  z-index: -1; 
 }
 
 #scroll-progress {
-  position: absolute; /* относительно шапки */
-  top: 100%; /* сразу под нижней границей шапки */
+  position: absolute; 
+  top: 100%; 
   left: 0;
-  height:4px; /* чуть потолще */
+  height:4px; 
   background: linear-gradient(90deg, #303A7D, #0B122D);
-  width: 0; /* динамически меняется через JS */
+  width: 0; 
   transition: width 0.1s;
-  z-index: 999; /* выше контента, но ниже шапки */
+  z-index: 999; 
 }
 
 /* === FIX MOBILE QUOTE POSITION === */
@@ -785,7 +728,7 @@ section.show {
 
   .quote-inner {
     position: relative;
-    padding: 55px 38px 65px; /* добавили место внизу под кнопку */
+    padding: 55px 38px 65px;
   }
 
   #quote-text {
@@ -818,3 +761,149 @@ section.show {
   }
 }
 
+/* Показываем только на мобильных, скрываем на ПК */
+.skills-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .skills { display: none !important; }
+  .skills-mobile { display: block !important; }
+}
+
+/* Общий блок */
+.skills-mobile {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+/* Фон */
+.skills-bg-mobile {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/skills-bg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Контент */
+.skills-content-mobile {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Header */
+.skills-header-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.character-name-mobile {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.role-mobile {
+  font-size: 1.2rem;
+}
+
+/* Divider */
+.divider-mobile {
+  width: 120px;
+  height: 1px;
+  background: rgba(255,255,255,0.8);
+  margin: 20px auto;
+}
+
+/* Subroles */
+.subroles-mobile {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+/* Skills */
+.skills-row-mobile {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.skill-circle-mobile {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-circle-mobile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(196,125,255,0.6);
+}
+
+/* Stats */
+.skills-stats-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stat-item-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-bar-mobile {
+  width: 90px;
+  height: auto;
+  margin-top: 4px;
+}
+
+/* Next button */
+.next-btn-mobile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.next-btn-mobile img { width: 20px; height: auto; }
+
+/* Tooltip */
+.tooltip-global-mobile {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 9999;
+}
+
+.tooltip-global-mobile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

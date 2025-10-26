@@ -39,7 +39,7 @@
         <img src="assets/forquote.png" alt="" class="quote-frame" aria-hidden="true">
         <div class="quote-inner">
           <p id="quote-text">
-“My Carmilla, why are you so<br>cold and pale?  <br>Just like the moonlight.”
+“My Carmilla, why are<br>you so<br>cold and pale?  <br>Just like the moonlight.”
           </p>
           <button id="sound-btn" aria-label="Play quote sound">🔊</button>
           <audio id="quote-audio" src="assets/quote.mp3" preload="auto"></audio>
@@ -152,13 +152,82 @@
 <div id="skill-tooltip" class="tooltip-global" aria-hidden="true"></div>
 
 
-</div> <!-- .skills-info -->
-</div> <!-- .skills-content -->
-</section> <!-- .skills -->
-
-</div>
+</div> 
 </div> 
 </section> 
+
+<!-- ===== SKILLS MOBILE SECTION ===== -->
+<section class="skills-mobile" id="skills-mobile">
+  <div class="skills-bg-mobile" id="skills-bg-mobile"></div>
+  <div class="skills-content-mobile">
+
+    <div class="skills-info-mobile">
+
+      <!-- Header: name + role -->
+      <div class="skills-header-mobile">
+        <h2 class="character-name-mobile" id="char-name-text-mobile">Cecilion</h2>
+        <span class="role-mobile" id="role-main-mobile">Mage</span>
+      </div>
+
+      <div class="divider-mobile"></div>
+
+      <!-- Subroles -->
+      <div class="subroles-mobile role-tags-mobile">
+        <span class="tag-mobile">Poke</span>
+        <span class="tag-mobile">Burst</span>
+      </div>
+
+      <!-- Skills -->
+      <div class="skills-row-mobile" id="skills-list-mobile">
+        <div class="skill-mobile" data-desc="Cecilion выпускает волну энергии, наносящую урон врагам.">
+          <img src="assets/cecskill1.png" alt="Skill 1" class="skill-circle-mobile">
+        </div>
+        <div class="skill-mobile" data-desc="Следующая атака Cecilion наносит дополнительный урон.">
+          <img src="assets/cecskill2.png" alt="Skill 2" class="skill-circle-mobile">
+        </div>
+        <div class="skill-mobile" data-desc="Cecilion ускоряется и восстанавливает здоровье.">
+          <img src="assets/cecskill3.png" alt="Skill 3" class="skill-circle-mobile">
+        </div>
+        <div class="skill-mobile" data-desc="Мощная ульта наносит урон по площади.">
+          <img src="assets/cecskill4.png" alt="Skill 4" class="skill-circle-mobile">
+        </div>
+        <div class="skill-mobile" data-desc="Пассивная способность усиливает все умения.">
+          <img src="assets/cecskill5.png" alt="Skill 5" class="skill-circle-mobile">
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="skills-stats-mobile">
+        <div class="stat-item-mobile">
+          <span class="stat-title-mobile">Durability</span>
+          <img id="durability-mobile" src="assets/durability (2).png" alt="Durability" class="stat-bar-mobile">
+        </div>
+        <div class="stat-item-mobile">
+          <span class="stat-title-mobile">Offense</span>
+          <img id="offense-mobile" src="assets/offense (2).png" alt="Offense" class="stat-bar-mobile">
+        </div>
+        <div class="stat-item-mobile">
+          <span class="stat-title-mobile">Ability Effects</span>
+          <img id="ability-mobile" src="assets/ability (2).png" alt="Ability Effects" class="stat-bar-mobile">
+        </div>
+        <div class="stat-item-mobile">
+          <span class="stat-title-mobile">Difficulty</span>
+          <img id="difficulty-mobile" src="assets/difficulty (2).png" alt="Difficulty" class="stat-bar-mobile">
+        </div>
+      </div>
+
+      <!-- Next button -->
+      <button id="next-btn-mobile" class="next-btn-mobile">
+        <img src="assets/next.png" alt="Next">
+      </button>
+
+      <!-- Tooltip -->
+      <div id="skill-tooltip-mobile" class="tooltip-global-mobile" aria-hidden="true"></div>
+
+    </div> 
+
+  </div> 
+</section>
 
 <!-- ===== Moonlit Waltz / Duo Skill ===== -->
 <section id="moonlit" class="moonlit-section">
@@ -178,7 +247,7 @@
     </div>
 
     <div class="mw-media-wrap">
-              <!-- декоративная рамка — ты можешь добавить свои элементы поверх неё -->
+             
 
 
       <div class="mw-frame">

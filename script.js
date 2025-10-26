@@ -334,3 +334,126 @@ waltzVideos.forEach(video => {
     video.style.boxShadow = '0 0 0 rgba(0,0,0,0)';
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsList = document.getElementById('skills-list-mobile');
+  const tooltip = document.getElementById('skill-tooltip-mobile');
+  const nextBtn = document.getElementById('next-btn-mobile');
+  const nameText = document.getElementById('char-name-text-mobile');
+  const roleMain = document.getElementById('role-main-mobile');
+  const tagsRow = document.querySelector('.role-tags-mobile');
+  const skillsBg = document.getElementById('skills-bg-mobile');
+  const durabilityImg = document.getElementById('durability-mobile');
+  const offenseImg = document.getElementById('offense-mobile');
+  const abilityImg = document.getElementById('ability-mobile');
+  const difficultyImg = document.getElementById('difficulty-mobile');
+
+  const data = [
+    {
+      name: 'Cecilion',
+      img: 'assets/cecmobile.png',
+      role: 'Mage',
+      tags: ['Poke','Burst'],
+      skillIcons: [
+        'assets/cecskill1.png','assets/cecskill2.png','assets/cecskill3.png',
+        'assets/cecskill4.png','assets/cecskill5.png'
+      ],
+      stats: {
+        durability: 'assets/durability (2).png',
+        offense: 'assets/offense (2).png',
+        ability: 'assets/ability (2).png',
+        difficulty: 'assets/difficulty (2).png'
+      }
+    },
+    {
+      name: 'Carmilla',
+      img: 'assets/carmobile.png',
+      role: 'Support',
+      tags: ['Crowd Control','Damage'],
+      skillIcons: [
+        'assets/carskill1.png','assets/carskill2.png','assets/carskill3.png','assets/carskill4.png'
+      ],
+      stats: {
+        durability: 'assets/durability2.png',
+        offense: 'assets/offense2.png',
+        ability: 'assets/ability (3).png',
+        difficulty: 'assets/difficulty2.png'
+      }
+    }
+  ];
+
+  let idx = 0;
+
+  function fadeSwapImage(imgEl, newSrc, delay=0){
+    if(!imgEl) return;
+    imgEl.style.opacity = 0;
+    setTimeout(()=>{
+      imgEl.src = newSrc;
+      imgEl.style.opacity = 1;
+    }, 150 + delay);
+  }
+
+  function updateCharacter(i){
+    const d = data[i];
+    if(nameText) nameText.textContent = d.name;
+    if(roleMain) roleMain.textContent = d.role;
+
+    if(tagsRow){
+      tagsRow.innerHTML = '';
+      d.tags.forEach(t=>{
+        const sp = document.createElement('span');
+        sp.className='tag-mobile';
+        sp.textContent = t;
+        tagsRow.appendChild(sp);
+      });
+    }
+
+    if(skillsBg && d.img) skillsBg.style.backgroundImage =`url(${d.img}`;
+
+    const skillEls = skillsList.querySelectorAll('.skill-circle-mobile');
+    d.skillIcons.forEach((src,sIdx)=>{
+      if(skillEls[sIdx]) fadeSwapImage(skillEls[sIdx],src,sIdx*40);
+    });
+
+    const statEls = [durabilityImg,offenseImg,abilityImg,difficultyImg];
+    const keys = ['durability','offense','ability','difficulty'];
+    statEls.forEach((el,k)=>{
+      if(el) fadeSwapImage(el,d.stats[keys[k]],k*60);
+    });
+  }
+
+  if(nextBtn){
+    nextBtn.addEventListener('click',()=>{
+      idx = (idx + 1) % data.length;
+      updateCharacter(idx);
+    });
+  }
+
+  // Tooltip
+  tooltip.style.position='absolute';
+  tooltip.style.zIndex=9999;
+  tooltip.classList.remove('visible');
+
+  skillsList.querySelectorAll('.skill-mobile').forEach(skill=>{
+    skill.addEventListener('mouseenter',e=>{
+      const desc = skill.dataset.desc;
+      if(!desc) return;
+      tooltip.textContent = desc;
+      tooltip.style.display='block';
+      tooltip.classList.add('visible');
+      const rect = skill.getBoundingClientRect();
+      tooltip.style.left=`${rect.left + window.scrollX + rect.width/2 - tooltip.offsetWidth/2}px`;
+      tooltip.style.top=`${rect.bottom + window.scrollY + 8}px`
+    });
+    skill.addEventListener('mousemove',e=>{
+      tooltip.style.left = e.pageX - tooltip.offsetWidth/2 + "px";
+      tooltip.style.top = e.pageY + 8 + "px";
+    });
+    skill.addEventListener('mouseleave',()=>{
+      tooltip.classList.remove('visible');
+      tooltip.style.display='none';
+    });
+  });
+
+  updateCharacter(0);
+});

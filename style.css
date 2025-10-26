@@ -4,7 +4,6 @@ html, body { height: 100%; }
 
 /* BODY BACKGROUND */
 body {
-    padding-top: 100%;
   font-family: 'Inter', sans-serif;
   color: #fff;
   background: url('assets/homeback.png') no-repeat center 8%/cover;
@@ -50,28 +49,28 @@ body {
   font-size: 2.5rem;
   color: white;
   position: relative;
-  -webkit-text-stroke: 0.8px #e6b3d6; 
+  -webkit-text-stroke: 0.8px #e6b3d6; /* розоватая обводка */
   text-stroke: 0.8px #e6b3d6
 }
 
 /* MAIN SECTION */
 main.home {
-  padding-top: 100px; 
+  padding-top: 100px; /* было 120px */
 }
 
 .content {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* подняли цитату */
   justify-content: flex-start;
   min-height: calc(100vh - 100px);
   padding-left: 10vw;
-  padding-top: 4vh; 
+  padding-top: 4vh; /* немного дополнительного воздуха */
 }
 
 /* QUOTE BOX */
 .quote-box {
   position: relative;
-  width: 420px;
+  width: 420px; /* было 550px */
   max-width: 55%;
 }
 
@@ -89,18 +88,18 @@ main.home {
 .quote-inner {
   position: relative;
   z-index: 2;
-  padding: 55px 38px;
+  padding: 55px 38px; /* было 80px 50px */
 }
 
 #quote-text {
   font-family: 'Italiana', serif;
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
   line-height: 1.5;
   color: #ffffff;
   text-align: left;
   margin-bottom: 20px;
-  white-space: pre-wrap;
-  word-break: normal;
+  white-space: pre-wrap; /* ← сохраняет пробелы и переносы строк */
+  word-break: break-word;
 }
 
 /* Highlighted letters */
@@ -280,11 +279,11 @@ main.home {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* всё вправо */
   align-items: center;
   padding-right: 8%;
 
-  top: -60px;
+  top: -60px; /* 🔼 поднимает весь блок вверх */
 }
 
 .skills-info {
@@ -294,15 +293,15 @@ main.home {
   max-width: 550px;
 }
 
-/* -------- HEADER -------- */
+/* -------- HEADER (исправлено) -------- */
 .skills-header {
   display: flex;
   align-items: center;
   gap: 16px;
-  justify-content: flex-start; 
+  justify-content: flex-start; /* прижимаем влево */
   width: fit-content;
   position: relative;
-  left: -150px; 
+  left: -150px; /* теперь точно двигается влево/вправо */
 }
 
 .character-name {
@@ -338,7 +337,7 @@ main.home {
   gap: 8px;
   margin-bottom: 30px;
   position: relative;
-  left: -220px; 
+  left: -220px; /* выравниваем всё вместе */
 }
 
 .role,
@@ -358,7 +357,7 @@ main.home {
 .skills-row {
   display: flex;
   gap: 28px;
-  margin-bottom: 50px; 
+  margin-bottom: 50px; /* отступ перед шкалами */
 }
 
 .skill-circle {
@@ -407,7 +406,7 @@ main.home {
 }
 
 /* -------- NEXT BUTTON -------- */
-.skills .next-btn { 
+.skills .next-btn { /* ограничиваем область только секцией Skills */
   background: none;
   border: none;
   cursor: pointer;
@@ -418,7 +417,7 @@ main.home {
 }
 
 .skills .next-btn img {
-  width: 20px; 
+  width: 20px; /* уменьшено */
   height: auto;
 }
 
@@ -501,7 +500,7 @@ main.home {
   padding: 8px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
   border: 8px solid rgba(196, 73, 174, 0.95); 
-  transform: perspective(800px) rotateX(0.8deg); 
+  transform: perspective(800px) rotateX(0.8deg);
   background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.08));
 }
 .mw-frame video {
@@ -671,7 +670,7 @@ body.loaded #preloader {
 }
 
 
-/* === NAVBAR COMPACT STYLE === */
+/* === NAVBAR COMPACT STYLE 
 .navbar {
   position: fixed;
   top: 0;
@@ -684,7 +683,7 @@ body.loaded #preloader {
 }
 
 .navbar nav {
-  height: 50px; 
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -696,17 +695,16 @@ body.loaded #preloader {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin: 0;
+  gap: 40px; /* ближе друг к другу 
   padding: 0;
 }
 
-/* ссылки */
+/* ссылки 
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.4rem; 
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
@@ -715,25 +713,27 @@ body.loaded #preloader {
   color: #7ab2ff;
 }
 
-/* логотип */
+/* логотип 
 .logo {
   font-family: 'Italiana', serif;
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
   margin: 0 30px; 
 }
 
-
+/* уменьшение при скролле 
 .navbar.shrink nav {
   height: 30px;
-}
+} === */
 
 .navbar.shrink {
   background:linear-gradient(to right, #303A7D, #0B122D);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  padding: 8px 20px;
 }
 
+/* чтобы контент не прятался под шапкой */
 body {
   padding-top: 60px;
 }
@@ -753,32 +753,68 @@ section.show {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('assets/history-bg (2).png') center/cover no-repeat;
-  z-index: -1; 
+  z-index: -1; /* чтобы текст был поверх фона */
 }
 
 #scroll-progress {
-  position: absolute; 
-  top: 100%; 
+  position: absolute; /* относительно шапки */
+  top: 100%; /* сразу под нижней границей шапки */
   left: 0;
-  height:4px; 
+  height:4px; /* чуть потолще */
   background: linear-gradient(90deg, #303A7D, #0B122D);
-  width: 0; 
+  width: 0; /* динамически меняется через JS */
   transition: width 0.1s;
-  z-index: 999; 
+  z-index: 999; /* выше контента, но ниже шапки */
 }
 
-/* Принудительная горизонтальная версия на телефонах */
+/* === FIX MOBILE QUOTE POSITION === */
 @media (max-width: 768px) {
-  body {
-    width: 1024px;       
-    min-width: 1024px;
-    transform: scale(0.7); 
-    transform-origin: top left;
-    overflow-x: auto;    
-    overflow-y: hidden;  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 5vw;
   }
 
-  main, .content, .skills-content, .gallery-grid {
-    transform: none; 
+  .quote-box {
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+  }
+
+  .quote-inner {
+    position: relative;
+    padding: 55px 38px 65px; /* добавили место внизу под кнопку */
+  }
+
+  #quote-text {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  #sound-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    margin: 0;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: transform .15s, box-shadow .15s;
+  }
+
+  #sound-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .quote-frame {
+    width: 100%;
+    height: auto;
   }
 }
+

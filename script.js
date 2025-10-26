@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // === Smooth scroll for anchor links ===
 document.querySelectorAll('.scroll-link').forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault(); // предотвращаем резкий переход
+    e.preventDefault(); 
     const targetID = this.getAttribute('href').substring(1);
     const targetSection = document.getElementById(targetID);
     if (!targetSection) return;

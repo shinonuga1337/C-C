@@ -4,6 +4,7 @@ html, body { height: 100%; }
 
 /* BODY BACKGROUND */
 body {
+    padding-top: 100%;
   font-family: 'Inter', sans-serif;
   color: #fff;
   background: url('assets/homeback.png') no-repeat center 8%/cover;
@@ -49,28 +50,28 @@ body {
   font-size: 2.5rem;
   color: white;
   position: relative;
-  -webkit-text-stroke: 0.8px #e6b3d6; /* розоватая обводка */
+  -webkit-text-stroke: 0.8px #e6b3d6; 
   text-stroke: 0.8px #e6b3d6
 }
 
 /* MAIN SECTION */
 main.home {
-  padding-top: 100px; /* было 120px */
+  padding-top: 100px; 
 }
 
 .content {
   display: flex;
-  align-items: flex-start; /* подняли цитату */
+  align-items: flex-start;
   justify-content: flex-start;
   min-height: calc(100vh - 100px);
   padding-left: 10vw;
-  padding-top: 4vh; /* немного дополнительного воздуха */
+  padding-top: 4vh; 
 }
 
 /* QUOTE BOX */
 .quote-box {
   position: relative;
-  width: 420px; /* было 550px */
+  width: 420px;
   max-width: 55%;
 }
 
@@ -88,12 +89,12 @@ main.home {
 .quote-inner {
   position: relative;
   z-index: 2;
-  padding: 55px 38px; /* было 80px 50px */
+  padding: 55px 38px;
 }
 
 #quote-text {
   font-family: 'Italiana', serif;
-  font-size: 1.6rem; /* было 2rem */
+  font-size: 1.6rem; 
   line-height: 1.5;
   color: #ffffff;
   text-align: left;
@@ -279,11 +280,11 @@ main.home {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end; /* всё вправо */
+  justify-content: flex-end;
   align-items: center;
   padding-right: 8%;
 
-  top: -60px; /* 🔼 поднимает весь блок вверх */
+  top: -60px;
 }
 
 .skills-info {
@@ -293,15 +294,15 @@ main.home {
   max-width: 550px;
 }
 
-/* -------- HEADER (исправлено) -------- */
+/* -------- HEADER -------- */
 .skills-header {
   display: flex;
   align-items: center;
   gap: 16px;
-  justify-content: flex-start; /* прижимаем влево */
+  justify-content: flex-start; 
   width: fit-content;
   position: relative;
-  left: -150px; /* теперь точно двигается влево/вправо */
+  left: -150px; 
 }
 
 .character-name {
@@ -337,7 +338,7 @@ main.home {
   gap: 8px;
   margin-bottom: 30px;
   position: relative;
-  left: -220px; /* выравниваем всё вместе */
+  left: -220px; 
 }
 
 .role,
@@ -357,7 +358,7 @@ main.home {
 .skills-row {
   display: flex;
   gap: 28px;
-  margin-bottom: 50px; /* отступ перед шкалами */
+  margin-bottom: 50px; 
 }
 
 .skill-circle {
@@ -406,7 +407,7 @@ main.home {
 }
 
 /* -------- NEXT BUTTON -------- */
-.skills .next-btn { /* ограничиваем область только секцией Skills */
+.skills .next-btn { 
   background: none;
   border: none;
   cursor: pointer;
@@ -417,7 +418,7 @@ main.home {
 }
 
 .skills .next-btn img {
-  width: 20px; /* уменьшено */
+  width: 20px; 
   height: auto;
 }
 
@@ -499,8 +500,8 @@ main.home {
   max-width: 92%;
   padding: 8px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-  border: 8px solid rgba(196, 73, 174, 0.95); /* яркая розовая рамка */
-  transform: perspective(800px) rotateX(0.8deg); /* тонкая перспективная неровность */
+  border: 8px solid rgba(196, 73, 174, 0.95); 
+  transform: perspective(800px) rotateX(0.8deg); 
   background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.08));
 }
 .mw-frame video {
@@ -642,7 +643,7 @@ html, body {
   width: 70px;
   height: 70px;
   border: 5px solid rgba(255, 192, 203, 0.2);
-  border-top-color: #ff7fbf; /* розовый акцент */
+  border-top-color: #ff7fbf; 
   border-radius: 50%;
   box-shadow: 0 0 20px 4px rgba(255, 105, 180, 0.3);
   animation: spin 1.2s linear infinite, glow 1.8s ease-in-out infinite alternate;
@@ -683,7 +684,7 @@ body.loaded #preloader {
 }
 
 .navbar nav {
-  height: 50px; /* меньше шапка */
+  height: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,7 +696,7 @@ body.loaded #preloader {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* ближе друг к другу */
+  gap: 40px;
   margin: 0;
   padding: 0;
 }
@@ -705,7 +706,7 @@ body.loaded #preloader {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.4rem; /* крупнее */
+  font-size: 1.4rem;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
@@ -717,13 +718,13 @@ body.loaded #preloader {
 /* логотип */
 .logo {
   font-family: 'Italiana', serif;
-  font-size: 2.5rem; /* больше логотип */
+  font-size: 2.5rem; 
   font-weight: 700;
   color: #fff;
-  margin: 0 30px; /* слова ближе к логотипу */
+  margin: 0 30px; 
 }
 
-/* уменьшение при скролле */
+
 .navbar.shrink nav {
   height: 30px;
 }
@@ -733,7 +734,6 @@ body.loaded #preloader {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* чтобы контент не прятался под шапкой */
 body {
   padding-top: 60px;
 }
@@ -753,17 +753,32 @@ section.show {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('assets/history-bg (2).png') center/cover no-repeat;
-  z-index: -1; /* чтобы текст был поверх фона */
+  z-index: -1; 
 }
 
 #scroll-progress {
-  position: absolute; /* относительно шапки */
-  top: 100%; /* сразу под нижней границей шапки */
+  position: absolute; 
+  top: 100%; 
   left: 0;
-  height:4px; /* чуть потолще */
+  height:4px; 
   background: linear-gradient(90deg, #303A7D, #0B122D);
-  width: 0; /* динамически меняется через JS */
+  width: 0; 
   transition: width 0.1s;
-  z-index: 999; /* выше контента, но ниже шапки */
+  z-index: 999; 
 }
 
+/* Принудительная горизонтальная версия на телефонах */
+@media (max-width: 768px) {
+  body {
+    width: 1024px;       
+    min-width: 1024px;
+    transform: scale(0.7); 
+    transform-origin: top left;
+    overflow-x: auto;    
+    overflow-y: hidden;  
+  }
+
+  main, .content, .skills-content, .gallery-grid {
+    transform: none; 
+  }
+}
